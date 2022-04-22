@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  font-family: 'Noto Sans KR';
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans KR';
+}
+
+body {
+  font-family: 'Noto Sans KR';
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  color: inherit; // 상속받겠다
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+ul,
+li,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
