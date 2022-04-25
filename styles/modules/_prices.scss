@@ -1,0 +1,82 @@
+// 디자인에서 숫자 텍스트는 tahoma폰트를 사용
+// 원화 텍스트에는 노토산스를 쓰기 때문에 나눠서 작업
+
+%price-base {
+  @include inline-flexbox(start);
+
+  .amount {
+    font-family: $font-price;
+    line-height: 1;
+  }
+
+  .currency {
+    font-family: $font-main;
+  }
+}
+
+.price-16,
+.price-20,
+.price-32 {
+  @extend %price-base;
+  color: $dark;
+
+  .amount {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .currency {
+    font-weight: 700;
+  }
+}
+
+.price-16 {
+  .amount {
+    font-size: 16px;
+  }
+
+  .currency {
+    @include text-style(14);
+  }
+}
+
+.price-20 {
+  .amount {
+    font-size: 20px;
+  }
+
+  .currency {
+    @include text-style(16);
+  }
+}
+
+.price-32 {
+  .amount {
+    font-size: 32px;
+  }
+
+  .currency {
+    font-size: 28px;
+    // 강의에서 추가함 근데 위에서 선언했는데 또 선언하는 이유 안알려줌
+    // font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.price-off {
+  @extend %price-base;
+  color: $secondary;
+
+  .amount {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-decoration: line-through;
+  }
+
+  .currency {
+    @include text-style(14);
+    font-weight: 400;
+  }
+}
